@@ -1,57 +1,60 @@
-HTML SCSS BabelResult Skip Results Iframe
-EDIT ON
-<main>
+<!doctype html>
+<html lang="en">
 
-  <div class="content">
-    <svg id="canvas"></svg>
-  </div>
+<head>
+  <meta charset="utf-8">
+  <title>Signature Pad demo</title>
+  <meta name="description"
+    content="Signature Pad - HTML5 canvas based smooth signature drawing using variable width spline interpolation.">
 
-  <div class="sidebar">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
-    <div class="row">
-      <div class="col-xs-12">
-        <h3>Start Doodling...</h3>      
-      </div>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39365077-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body onselectstart="return false">
+
+  <div id="signature-pad" class="signature-pad">
+    <div class="signature-pad--body">
+      <canvas></canvas>
     </div>
-        
-    <div class="row control">
-      <div class="col-xs-12">      
-        <button id="clear" class="btn btn-default">Clear</button>
-      </div>
-    </div>
+    <div class="signature-pad--footer">
+      <div class="description">Sign above</div>
 
-    <!--<div class="row control">
-      <div class="col-xs-12">
-        <hr>
-        <div class="row slider-row">
-          <div class="col-xs-12">
-            <div class="pull-left">Tolerance</div>
-            <div class="pull-left">
-              <input id="slider" type="range" min="0" max="10" value="10" step="1" />
-            </div>
-            <div id="smoothing" class="pull-left">5.4</div>
-          </div>
+      <div class="signature-pad--actions">
+        <div>
+          <button type="button" class="button clear" data-action="clear">Clear</button>
+          <button type="button" class="button" data-action="change-color">Change color</button>
+          <button type="button" class="button" data-action="undo">Undo</button>
+
+        </div>
+        <div>
+          <button type="button" class="button save" data-action="save-png">Save as PNG</button>
+          <button type="button" class="button save" data-action="save-jpg">Save as JPG</button>
+          <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
         </div>
       </div>
-    </div>-->
+    </div>
+  </div>
 
-    <!--<div class="row control">
-      <div class="col-xs-12">     
-        <table class="table-condensed">
-          <thead>
-            <tr>
-              <th>Path</th>
-              <th>Initial</th>
-              <th>Reduced</th>
-            </tr>
-          </thead>
-          <tbody id="table">
-          </tbody>
-        </table>      
-      </div>
-    </div>-->
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+  <script src="./script.js"></script>
+</body>
 
-  </div>  
-  
-  <script src="./script.js" />
-</main>
+</html>
