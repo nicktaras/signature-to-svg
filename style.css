@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+}
+
+main {
+  visibility: hidden;
+  height: 100%;
+}
+
+#canvas {
+  height: 100%;
+  width: 100%;
+  cursor: crosshair;
+}
+
+.slider-row {
+  margin-top: 10px;
+  
+  div {
+    padding-right: 10px;
+  }
+  
+  input {
+    min-width: 150px;
+  }
+}
+
+path, polyline {
+  fill: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.control {
+  
+}
+
+table {
+  margin-top: 15px;
+}
+
+.table-condensed > tbody >tr > td, 
+.table-condensed > tbody >tr > th, 
+.table-condensed > thead >tr > td, 
+.table-condensed > thead >tr > th {
+  padding: 1px 4px;
+}
+
+.sidebar {  
+  border: 1px solid #eee;  
+  position: absolute;  
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;  
+  padding: 5px 15px;
+  background: white;
+  
+  &.drawing {
+    pointer-events: none;
+  }
+  
+  .row:first-child {
+    margin-bottom: 6px;
+  }
+}
+
+.content {  
+  position: relative;
+  height: 100%;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+
+/////////
+.sidebar {
+  height: initial;
+  border: none;
+  background: transparent;
+}
